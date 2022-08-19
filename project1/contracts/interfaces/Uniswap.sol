@@ -3,7 +3,7 @@ pragma solidity ^0.8;
 
 interface IUniswapV2Router {
     function swapExactTokensForTokens(
-        uint amounswapExactTokensForTokenstIn,
+        uint amountswapExactTokensForTokensIn,
         uint amountOutMin,
         address[] calldata path,
         address to,

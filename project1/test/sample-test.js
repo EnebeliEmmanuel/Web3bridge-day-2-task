@@ -5,7 +5,7 @@ const { ethers } = require("hardhat");
 // const IERC20ABI = ("../artifacts/contracts/interfaces/IERC20.sol/IERC20.json");
 const ERC20ABI = require("@uniswap/v2-core/build/ERC20.json").abi;
 
-describe("Test Swap", function () {
+describe("Test Swapper", function () {
 
     // DAIAddress and WETHAddress are the addresses for Dai Contract and WETH Contract,
     // respectively, which will be used in the trading
@@ -21,7 +21,7 @@ describe("Test Swap", function () {
     let TestSwapContract;
 
     beforeEach(async () => {
-        const TestSwapFactory = await ethers.getContractFactory("testSwap");
+        const TestSwapFactory = await ethers.getContractFactory("Swapper");
         TestSwapContract = await TestSwapFactory.deploy();
         await TestSwapContract.deployed();
     })
